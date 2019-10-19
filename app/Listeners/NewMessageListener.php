@@ -2,11 +2,11 @@
 
 namespace App\Listeners;
 
-use App\Events\ExampleEvent;
+use App\Events\NewMessageEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class ExampleListener
+class NewMessageListener
 {
     /**
      * Create the event listener.
@@ -21,10 +21,10 @@ class ExampleListener
     /**
      * Handle the event.
      *
-     * @param  ExampleEvent  $event
+     * @param  NewMessageEvent  $event
      * @return void
      */
-    public function handle(ExampleEvent $event)
+    public function handle(NewMessageEvent $event)
     {
         //
     }

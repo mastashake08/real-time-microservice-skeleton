@@ -6,3 +6,7 @@ window.Echo = new Echo({
     broadcaster: 'socket.io',
     host: window.location.hostname + ':6001'
 });
+Echo.private('example-channel')
+    .listen('NewMessageEvent', (e) => {
+        console.log(e.message);
+    });
